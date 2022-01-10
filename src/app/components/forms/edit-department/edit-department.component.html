@@ -1,0 +1,42 @@
+<div class="flex justify-center bg-center bg-white  py-12 px-4 sm:px-6 lg:px-8  bg-cover  items-center">
+  <div class="flex flex-col ">
+    <div class="flex flex-col sm:flex-row items-center">
+      <h2 class="font-semibold text-xl sm:text-3xl mr-auto text-indigo-500">Modification du Departement.</h2>
+    </div>
+    <div class="mt-5">
+      <form  [formGroup]="editForm" (ngSubmit)="onSubmit()" class="form" >
+        <div class="flex flex-col">
+          <div>
+            <div class="flex flex-col w-full text-xs">
+              <div class="w-full flex space-y-2 flex-col mb-3">
+                <label class="font-semibold text-gray-600 py-2" for="name"> Name</label>
+                <input formControlName="name" placeholder="john" name="Name"
+                       class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                       type="text"  id="name">
+              </div>
+
+              <div class="w-full flex space-y-2 flex-col mb-3">
+                <label class="font-semibold text-gray-600 py-2" for="image"> Image</label>
+                <input formControlName="image" placeholder="Doe" name="lastname"
+                       class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                       type="text"  id="image">
+              </div>
+            </div>
+
+          </div>
+          <button
+            class="mt-5 w-full md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500">
+            Update
+          </button>
+        </div>
+      </form>
+
+      <button
+        (click)="onCancel()"
+        class=" w-full my-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-full hover:shadow-lg hover:bg-gray-100">
+        Cancel
+      </button>
+
+    </div>
+  </div>
+</div>

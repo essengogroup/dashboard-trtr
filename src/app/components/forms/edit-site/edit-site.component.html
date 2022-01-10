@@ -1,0 +1,79 @@
+<div class="flex justify-center bg-center bg-white  py-12 px-4 sm:px-6 lg:px-8  bg-cover  items-center">
+  <div class="flex flex-col ">
+    <div class="flex flex-col sm:flex-row items-center">
+      <h2 class="font-semibold text-xl sm:text-3xl mr-auto text-indigo-500">Ajouter un Departement.</h2>
+    </div>
+    <div class="mt-5">
+      <form  [formGroup]="editSiteForm" (ngSubmit)="onSubmit()" class="form" >
+        <div class="flex flex-col">
+
+          <div class="flex flex-col sm:flex-row  w-full text-xs">
+            <div>
+              <div class="w-full flex space-y-2 flex-col mb-3 mr-3 sm:mr-0">
+                <label class="font-semibold text-gray-600 py-2" for="name"> Nom</label>
+                <input formControlName="name" placeholder="john" name="Name"
+                       class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                       type="text"  id="name">
+              </div>
+
+              <div class="w-full flex space-y-2 flex-col mb-3 mr-3 sm:mr-0">
+                <label class="font-semibold text-gray-600 py-2" for="price"> Prix</label>
+                <input formControlName="price" placeholder="1200 XAF" name="prix"
+                       class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                       type="number"  id="price">
+              </div>
+
+              <div class="w-full flex space-y-2 flex-col mb-3 mr-3 sm:mr-0">
+                <label class="font-semibold text-gray-600 py-2" for="avantages"> avantages</label>
+                <input formControlName="avantages" placeholder="hebergements" name="avantages"
+                       class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                       type="text"  id="avantages">
+              </div>
+
+              <div class="w-full flex space-y-2 flex-col mb-3 mr-3 sm:mr-0">
+                <label class="font-semibold text-gray-600 py-2" for="galery"> Galerie</label>
+                <input formControlName="galery" placeholder="http://..." name="galery"
+                       class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                       type="text"  id="galery">
+              </div>
+            </div>
+
+            <div>
+              <div class="w-full flex space-y-2 flex-col mb-3 ml-3 sm:ml-0">
+                <label class="font-semibold text-gray-600 py-2" for="image"> Image</label>
+                <input formControlName="image" placeholder="http://..." name="image"
+                       class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                       type="text"  id="image">
+              </div>
+
+              <div class="w-full flex space-y-2 flex-col mb-3 ml-3 sm:ml-0">
+                <label class="font-semibold text-gray-600 py-2" for="description"> Description</label>
+                <textarea name="description" placeholder="decrivez le site..." formControlName="description" id="description" class="h-10 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"></textarea>
+
+              </div>
+
+              <div class="w-full flex space-y-2 flex-col mb-3 ml-3 sm:ml-0">
+                <label class="font-semibold text-gray-600 py-2" for="consign"> Consigne</label>
+                <textarea id="consign" name="consign"  placeholder="les consignes..." formControlName="consign" class="h-10 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"></textarea>
+
+              </div>
+            </div>
+
+          </div>
+
+          <button
+            class=" w-full md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500">
+            Save
+          </button>
+        </div>
+      </form>
+
+      <button
+        (click)="onCancel()"
+        class=" w-full my-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border text-gray-600 rounded-full hover:shadow-lg hover:bg-gray-100">
+        Cancel
+      </button>
+
+    </div>
+  </div>
+</div>

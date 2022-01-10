@@ -1,0 +1,20 @@
+
+<section class="flex flex-col text-gray-600 body-font">
+  <button mat-button (click)="onAddFileToMedia()"> Ajouter une image</button>
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full" *ngFor="let mediatech of mediatechs | paginate: {
+                                                      itemsPerPage: 6,
+                                                      currentPage: p,
+                                                      totalItems: total }">
+        <a class="block relative h-full rounded overflow-hidden">
+          <img class="object-cover object-center w-full h-full block" src="{{mediatech.downloadURL}}" alt="{{mediatech.originalName}}">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full text-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</section>
